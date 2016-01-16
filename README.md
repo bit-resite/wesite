@@ -6,10 +6,10 @@
 	[add|impl|remove|fix package.target(.target())](comment)
 
  * Example
-    - method
-	    [add Main.main()]
-    - class
-	    [impl Main class]
+    - method case
+    [add Main.main()]
+    - class case
+    [impl Main class]
 
  * Requirement
     1. push는 무조건 하나의 작업 플로우가 끝났을 때만 수행
