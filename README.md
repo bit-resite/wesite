@@ -1,7 +1,7 @@
 # wesite
   Hello wesite
   
-# git convention
+# Convention
  * commit	message
 	[add|impl|remove|fix package.target(.target())](comment)
 
