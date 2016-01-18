@@ -1,7 +1,3 @@
-# wesite
-  Hello wesite
--------
-
 # Requirement
   * push는 무조건 하나의 작업 플로우가 끝났을 때만 수행
   * push하기 전에 반드시 pull하고 conflict 발생 시 해결
