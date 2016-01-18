@@ -2,8 +2,8 @@
   Hello wesite
   
 # Convention
- * commit message
-   [add|impl|remove|fix package.target(.target())](comment)
+ * commit message <br>
+  [add | impl | remove | fix | another   package.targetClass(.targetMethod())] (comment)
 
  * Example
     - method case
