@@ -1,6 +1,7 @@
 # wesite
 -------
   Hello wesite
+-------
 
 # Requirement
 -------
@@ -10,7 +11,7 @@
   
 # Convention
 -------
-  * commit message <br>
+  * Commit Message <br>
     `[add | impl | remove | fix | another   package.targetClass(.targetMethod())]` (+ etc comment)
 
   * Example <br>
