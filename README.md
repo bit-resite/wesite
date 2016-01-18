@@ -10,4 +10,3 @@
   * Example
     - class  case : `[impl dao.UserDao class]`
     - method case : `[add dao.UserDao.add()] (Refactoring scheduled for tomorrow)`
-    - 
