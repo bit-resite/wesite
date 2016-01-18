@@ -11,8 +11,8 @@
 # Convention
 -------
   * commit message <br>
-    '[add | impl | remove | fix | another   package.targetClass(.targetMethod())]' (+ etc comment)
+    `[add | impl | remove | fix | another   package.targetClass(.targetMethod())]` (+ etc comment)
 
   * Example <br>
-    - class  case : '[impl dao.UserDao class]'
-    - method case : '[add dao.UserDao.add()] (Refactoring scheduled for tomorrow)'
+    - class  case : `[impl dao.UserDao class]`
+    - method case : `[add dao.UserDao.add()] (Refactoring scheduled for tomorrow)`
