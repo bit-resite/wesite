@@ -10,12 +10,14 @@
 	List<GuestBookVo> list = (List<GuestBookVo>)request.getAttribute("list");
 pageContext.setAttribute("newLine","\n");
 %>
+
+<!--  이건 깃 커밋 테스트용 -->
 <!doctype html>
 <html>
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/guestbook.css" rel="stylesheet"
+<link href="/wesite/assets/css/guestbook.css" rel="stylesheet"
 	type="text/css">
 </head>
 <body>
