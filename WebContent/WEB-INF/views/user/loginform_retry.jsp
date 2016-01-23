@@ -5,16 +5,16 @@
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/user.css" rel="stylesheet" type="text/css">
+<link href="/wesite/assets/css/user.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
 			<c:import url ="/WEB-INF/views/include/header.jsp"/>
 		<div id="content">
 			<div id="user">
-				<form id="login-form" name="loginform" method="post" action="/mysite/user?a=login">
+				<form id="login-form" name="loginform" method="post" action="/wesite/user?a=login">
 					<label class="block-label" for="email">이메일</label>
 					<input id="email" name="email" type="text" value="">
 					<label class="block-label" >패스워드</label>

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ page import="java.util.List"%>
-<%@ page import="com.hanains.mysite.dao.GuestBookDao"%>
-<%@ page import="com.hanains.mysite.vo.GuestBookVo"%>
+<%@ page import="com.hanains.wesite.dao.GuestBookDao"%>
+<%@ page import="com.hanains.wesite.vo.GuestBookVo"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -15,7 +15,7 @@ pageContext.setAttribute("newLine","\n");
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="/wesite/assets/css/guestbook.css" rel="stylesheet"
 	type="text/css">
@@ -25,7 +25,7 @@ pageContext.setAttribute("newLine","\n");
 		<c:import url ="/WEB-INF/views/include/header.jsp"/>
 		<div id="content">
 			<div id="guestbook">
-				<form action="/mysite/guestbook" method="post">
+				<form action="/wesite/guestbook" method="post">
 					<input type="hidden" name="a" value="insert">
 					<table>
 						<tr>
@@ -55,7 +55,7 @@ pageContext.setAttribute("newLine","\n");
 							<td>${count-status.index }</td>
 							<td>${vo.name}</td>
 							<td>${vo.reg_date}</td>
-							<td><a href="/mysite/guestbook?a=deleteform&id=${vo.no}">삭제</a></td>
+							<td><a href="/wesite/guestbook?a=deleteform&id=${vo.no}">삭제</a></td>
 						</tr>
 						<tr>
 							<!-- <td colspan=4><!%=vo.getMessage().replaceAll("\n", "<br/>") %></td> -->

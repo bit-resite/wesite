@@ -5,9 +5,9 @@
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/guestbook.css" rel="stylesheet" type="text/css">
+<link href="/wesite/assets/css/guestbook.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
@@ -15,14 +15,14 @@
 	
 		<div id="content">
 			<div id="guestbook" class="delete-form">
-				<form method="post" action="/mysite/guestbook">
+				<form method="post" action="/wesite/guestbook">
 					<input type="hidden" name="a" value="delete">
 					<input type='hidden' name="no" value="<%=no%>">
 					<label>비밀번호</label>
 					<input type="password" name="password">
 					<input type="submit" value="확인">
 				</form>
-				<a href="/mysite/guestbook">방명록 리스트</a>
+				<a href="/wesite/guestbook">방명록 리스트</a>
 			</div>
 		</div>
 		<c:import url ="/WEB-INF/views/include/navigation.jsp"/>
