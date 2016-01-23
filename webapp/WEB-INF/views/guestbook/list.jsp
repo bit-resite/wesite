@@ -1,13 +1,12 @@
+<%@page import="com.hanains.wesite.domain.guestbook.GuestBook"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ page import="java.util.List"%>
-<%@ page import="com.hanains.mysite.dao.GuestBookDao"%>
-<%@ page import="com.hanains.mysite.vo.GuestBookVo"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
 	//object to down casting
-	List<GuestBookVo> list = (List<GuestBookVo>)request.getAttribute("list");
+	List<GuestBook> list = (List<GuestBook>)request.getAttribute("list");
 pageContext.setAttribute("newLine","\n");
 %>
 <!doctype html>

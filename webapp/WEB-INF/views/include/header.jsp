@@ -1,3 +1,4 @@
+<%@page import="com.hanains.wesite.domain.user.User"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -5,9 +6,8 @@
 	pageEncoding="UTF-8"%>
 
 
-<%@ page import="com.hanains.mysite.vo.UserVo"%>
 <%
-	UserVo authUser = (UserVo) session.getAttribute("authUser");
+	User authUser = (User) session.getAttribute("authUser");
 	//jsp는 이렇게 쓰지만 서블릿에서는 request.getSession();
 %>
 <div id="header">
