@@ -42,7 +42,9 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath:config/applicationContext.xml
+			classpath:config/applicationContext.xml,
+			classpath:config/mybatisContext.xml,
+			classpath:config/transactionContext.xml
 		</param-value>
 	</context-param>
 
