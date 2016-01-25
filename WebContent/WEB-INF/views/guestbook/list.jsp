@@ -1,22 +1,21 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ page import="java.util.List"%>
-<%@ page import="com.hanains.mysite.dao.GuestBookDao"%>
-<%@ page import="com.hanains.mysite.vo.GuestBookVo"%>
+<%@ page import="com.hanains.wesite.dao.GuestBookDao"%>
+<%@ page import="com.hanains.wesite.vo.GuestBookVo"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
 	//object to down casting
 	List<GuestBookVo> list = (List<GuestBookVo>)request.getAttribute("list");
-pageContext.setAttribute("newLine","\n");
+	pageContext.setAttribute("newLine","\n");
 %>
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/guestbook.css" rel="stylesheet"
-	type="text/css">
+<link href="/mysite/assets/css/guestbook.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
@@ -41,11 +40,9 @@ pageContext.setAttribute("newLine","\n");
 					</table>
 				</form>
 
-
 				<c:set var="count" value="${fn:length(list)}" />
 				--${count}--
 				<c:forEach items="${list }" var="vo" varStatus="status">
-
 
 					<br>
 					<table width=510 border=1>
@@ -61,7 +58,6 @@ pageContext.setAttribute("newLine","\n");
 						</tr>
 					</table>
 				</c:forEach>
-
 			</div>
 		</div>
 		<c:import url ="/WEB-INF/views/include/navigation.jsp"/>

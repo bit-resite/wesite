@@ -5,13 +5,13 @@
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="/mysite/assets/css/user.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
-			<c:import url ="/WEB-INF/views/include/header.jsp"/>
+		<c:import url ="/WEB-INF/views/include/header.jsp"/>
 		<div id="content">
 			<div id="user">
 				<form id="login-form" name="loginform" method="post" action="/mysite/user?a=login">
@@ -28,7 +28,6 @@
 		</div>
 		<c:import url ="/WEB-INF/views/include/navigation.jsp"/>
 		<c:import url ="/WEB-INF/views/include/footer.jsp"/>
-		
 	</div>
 </body>
 </html>

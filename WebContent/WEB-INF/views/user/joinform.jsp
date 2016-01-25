@@ -5,7 +5,7 @@
 <!doctype html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="/mysite/assets/css/user.css" rel="stylesheet" type="text/css">
 </head>
@@ -14,7 +14,6 @@
 		<c:import url ="/WEB-INF/views/include/header.jsp"/>
 		<div id="content">
 			<div id="user">
-
 				<form id="join-form" name="joinForm" method="post" action="/mysite/user">
 					<input type="hidden" name="a" value="join">
 					<label class="block-label" for="name">이름</label>
@@ -40,7 +39,6 @@
 					</fieldset>
 					
 					<input type="submit" value="가입하기">
-					
 				</form>
 			</div>
 		</div>

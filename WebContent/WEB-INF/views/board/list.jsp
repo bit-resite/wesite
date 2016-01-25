@@ -1,15 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>mysite</title>
+<title>wesite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/board.css" rel="stylesheet"
-	type="text/css">
+<link href="/mysite/assets/css/board.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="container">
@@ -17,8 +15,8 @@
 		<div id="content">
 			<div id="board">
 				<form id="search_form" action="" method="post">
-					<input type="text" id="kwd" name="kwd" value=""> <input
-						type="submit" value="찾기">
+					<input type="text" id="kwd" name="kwd" value="">
+					<input type="submit" value="찾기">
 				</form>
 				<table class="tbl-ex">
 					<tr>
@@ -39,11 +37,10 @@
 							<td>${vo.viewCount }</td>
 							<td>${vo.regdate }</td>
 							<td><c:if test='${authUser.no == vo.memberNo }'>
-
 									<a href="/mysite/board?a=delete&no=${vo.no }" class="del">
 										<img id="recycle" src="/mysite/assets/images/recycle.png">
 									</a>
-								</c:if></td>
+							</c:if></td>
 						</tr>
 					</c:forEach>
 
@@ -63,7 +60,6 @@
 						<td>2015-09-25 07:24:32</td>
 						<td><a href="" class="del">삭제</a></td>
 					</tr>
-
 				</table>
 				<div class="pager">
 					<ul>
