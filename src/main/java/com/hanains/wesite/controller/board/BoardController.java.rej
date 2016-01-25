@@ -1,0 +1,18 @@
+diff a/src/main/java/com/hanains/wesite/controller/board/BoardController.java b/src/main/java/com/hanains/wesite/controller/board/BoardController.java	(rejected hunks)
+@@ -22,10 +22,13 @@
+ 		System.out.println(this.getClass());
+ 	}
+ 	
+-	@RequestMapping()
+-	public String getList(){
++	@RequestMapping("/list")
++	public String list(HttpServletRequest request) throws Exception{
++		List<Board> list = boardService.getList();
++		request.setAttribute("list", list);
+ 		
+-		return "";
++		return "/board/list";
+ 	}
+ 	
++	
+ }

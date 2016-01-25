@@ -1,0 +1,30 @@
+diff a/src/com/hanains/wesite/controller/GuestbookController.java b/src/com/hanains/wesite/controller/GuestbookController.java	(rejected hunks)
+@@ -24,7 +24,27 @@
+ 		model.addAttribute("list", list);
+ 		
+ 		
+-		return "/WEB-INF/views/index.jsp";
++		return "/guestbook/listsp";
++	}
++	
++	
++	@RequestMapping("/insert")
++	public String insert(@ModelAttribute GuestBookVo vo) {
++		
++		if(vo.getMessage().trim().length()==0 ||vo.getName().trim().length()==0 || vo.getPassword().trim().length()==0){
++			return "redirect:/guestbook?result=fail";
++		}
++		
++		guestBookService.write(vo);
++		return "redirect:/guestbook/";
++		
++	}
++	
++	@RequestMapping("/delete")
++	public String delte(@ModelAttribute GuestBookVo vo){
++		
++		guestBookService.delete(vo);
++		return "redirect:/guestbook/";
+ 	}
+ 	
+ 	
