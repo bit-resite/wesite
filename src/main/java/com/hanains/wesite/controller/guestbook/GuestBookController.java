@@ -22,7 +22,7 @@ public class GuestBookController {
 	public GuestBookController() {
 		System.out.println(this.getClass());
 	}
-	
+
 	@RequestMapping("/list")
 	public String list(HttpServletRequest request) throws Exception{
 		List<GuestBook> list =guestBookService.getList();

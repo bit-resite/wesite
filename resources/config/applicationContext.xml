@@ -19,8 +19,8 @@
         				http://www.springframework.org/schema/task/spring-task-3.0.xsd">
         		
 	<!-- 	
-		<context:annotation-config /> 
 	-->
+		<context:annotation-config /> 
 	
 	<!-- 
 		<context:component-scan/> 빈 스캐너 기능 제공 +  <context:annotation-config />에 의해 등록되는 들도 등록해준다. 

@@ -6,13 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>wesite</name>
-
-	<properties>
+	
+<properties>
 		<org.springframework-version>4.0.3.RELEASE</org.springframework-version>
 	</properties>
 	<!-- 변수 -->
-
-	<dependencies>
+<dependencies>
 	
 		<!-- Spring core -->
 		<dependency>
@@ -100,6 +99,8 @@
 
 	</dependencies>
 
+
+
 	<!--oracle -->
 	<repositories>
 		<repository>
@@ -108,6 +109,8 @@
 			<url>http://maven.jahia.org/maven2</url>
 		</repository>
 	</repositories>
+
+	
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
