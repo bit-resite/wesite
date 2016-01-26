@@ -21,7 +21,7 @@ public class GuestBookDaoImpl implements GuestBookDao{
 
 	@Override
 	public List<GuestBook> getList() throws Exception {
-		List<GuestBook> list = sqlSession.selectOne("guestbook.getList");
+		List<GuestBook> list = sqlSession.selectList("guestbook.getList");
 		return list;
 	}
 

@@ -4,11 +4,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%
-	//object to down casting
-	List<GuestBook> list = (List<GuestBook>)request.getAttribute("list");
-pageContext.setAttribute("newLine","\n");
-%>
 <!doctype html>
 <html>
 <head>
@@ -22,14 +17,13 @@ pageContext.setAttribute("newLine","\n");
 		<c:import url ="/WEB-INF/views/include/header.jsp"/>
 		<div id="content">
 			<div id="guestbook">
-				<form action="${pageContext.request.contextPath}/guestbook" method="post">
-					<input type="hidden" name="a" value="insert">
+				<form action="${pageContext.request.contextPath}/guestbook/insert" method="post">
 					<table>
 						<tr>
 							<td>이름</td>
-							<td><input type="text" name="name"></td>
+							<td><input type="text" name="name" value="${sessionScope.authUser.name}" ></td>
 							<td>비밀번호</td>
-							<td><input type="password" name="pass"></td>
+							<td><input type="password" name="password"></td>
 						</tr>
 						<tr>
 							<td colspan=4><textarea name="content" id="content"></textarea></td>
@@ -44,15 +38,13 @@ pageContext.setAttribute("newLine","\n");
 				<c:set var="count" value="${fn:length(list)}" />
 				--${count}--
 				<c:forEach items="${list }" var="vo" varStatus="status">
-
-
 					<br>
 					<table width=510 border=1>
 						<tr>
 							<td>${count-status.index }</td>
 							<td>${vo.name}</td>
 							<td>${vo.reg_date}</td>
-							<td><a href="${pageContext.request.contextPath}/guestbook/deleteform?id=${vo.no}">삭제</a></td>
+							<td><a href="${pageContext.request.contextPath}/guestbook/form?no=${vo.no}">삭제</a></td>
 						</tr>
 						<tr>
 							<!-- <td colspan=4><!%=vo.getMessage().replaceAll("\n", "<br/>") %></td> -->

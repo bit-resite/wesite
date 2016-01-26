@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hanains.wesite.domain.guestbook.GuestBook;
+import com.hanains.wesite.domain.user.User;
 import com.hanains.wesite.service.guestbook.GuestBookService;
 
 @Controller
@@ -25,6 +27,7 @@ public class GuestBookController {
 	
 	@RequestMapping("/list")
 	public String list(HttpServletRequest request) throws Exception{
+		System.out.println(guestBookService.getList());
 		List<GuestBook> list =guestBookService.getList();
 		
 		request.setAttribute("list", list);
@@ -33,11 +36,14 @@ public class GuestBookController {
 	}
 	
 	@RequestMapping("/insert")
-	public String insert(@ModelAttribute GuestBook guestBook, HttpServletRequest request)throws Exception{
-		
-		String name = request.getParameter("name");
-		String password = request.getParameter("password");
-		String content=request.getParameter("content");
+	public String insert(
+			@ModelAttribute("guestbook") GuestBook guestBook,
+			@RequestParam("name") String name,
+			@RequestParam("password") String password,
+			@RequestParam("content") String content,
+			HttpServletRequest request)throws Exception{
+
+		System.out.println(name+"/"+password+"/"+content+"/"+request.getParameter("content"));
 		
 		guestBook.setName(name); guestBook.setPassword(password); guestBook.setMessage(content);
 		System.out.println("insert = "+guestBook);
@@ -54,7 +60,9 @@ public class GuestBookController {
 	@RequestMapping("delete")
 	public String delete(HttpServletRequest request, @ModelAttribute GuestBook guestBook) throws Exception{
 		
-		System.out.println("deleteC:"+guestBook);
+		System.out.println(request.getParameter("no"));
+		
+		guestBook.setPassword(request.getParameter("password"));
 		
 		guestBookService.delete(guestBook);
 		
