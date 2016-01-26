@@ -6,5 +6,42 @@
 
 		
 <mapper namespace="user">
+<select id="getbyEmailAndPassword" parameterType="map" resultType="com.hanains.wesite.domain.user.User">
+		<![CDATA[
+				SELECT no, name, email
+				FROM member
+				WHERE email=#{email}
+				 	  AND password=#{password}
+		]]>
+	</select>
 
+	<select id="getByNo" parameterType="integer" resultType="User">
+		<![CDATA[
+				SELECT no, name, email
+				FROM member
+				WHERE no=#{no}
+		]]>
+	</select>
+	
+	<select id="selectByEmail" parameterType="String" resultType="User">
+		<![CDATA[
+			SELECT no, name, email,gender
+			FROM member
+			WHERE email=#{email}
+		]]>
+	</select>
+
+	<insert id="insert" parameterType="User">
+		<![CDATA[
+			insert
+				into member
+				values ( member_no_seq.nextval, #{name}, #{email}, #{password}, #{gender} )
+		]]>
+	</insert>
+	
+	<delete id="deleteNoPassword" parameterType="User">
+		DELETE FROM member 
+		WHERE password=#{password}
+	</delete>
+	
 </mapper>

@@ -8,7 +8,7 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/board.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/assets/css/board.css" rel="stylesheet"
 	type="text/css">
 </head>
 <body>
@@ -34,36 +34,18 @@
 					<c:forEach items='${list }' var='vo' varStatus='status'>
 						<tr>
 							<td>${count-status.index }</td>
-							<td><a href="/mysite/board?a=view&no=${vo.no }">${vo.title }</a></td>
+							<td><a href="${pageContext.request.contextPath}/board/view?no=${vo.no }">${vo.title }</a></td>
 							<td>${vo.memberName }</td>
 							<td>${vo.viewCount }</td>
 							<td>${vo.regdate }</td>
 							<td><c:if test='${authUser.no == vo.memberNo }'>
 
-									<a href="/mysite/board?a=delete&no=${vo.no }" class="del">
-										<img id="recycle" src="/mysite/assets/images/recycle.png">
+									<a href="${pageContext.request.contextPath}/board/delete?no=${vo.no }" class="del">
+										<img id="recycle" src="${pageContext.request.contextPath}/assets/images/recycle.png">
 									</a>
 								</c:if></td>
 						</tr>
 					</c:forEach>
-
-					<tr>
-						<td>2</td>
-						<td><a href="/mysite/board?a=view">두 번째 글입니다.</a></td>
-						<td>안대혁</td>
-						<td>3</td>
-						<td>2015-10-02 12:04:12</td>
-						<td><a href="" class="del">삭제</a></td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td><a href="/mysite/board?a=view">첫 번째 글입니다.</a></td>
-						<td>안대혁</td>
-						<td>3</td>
-						<td>2015-09-25 07:24:32</td>
-						<td><a href="" class="del">삭제</a></td>
-					</tr>
-
 				</table>
 				<div class="pager">
 					<ul>
@@ -77,7 +59,7 @@
 					</ul>
 				</div>
 				<div class="bottom">
-					<a href="/mysite/board?a=write" id="new-book">글쓰기</a>
+					<a href="${pageContext.request.contextPath}/board?a=write" id="new-book">글쓰기</a>
 				</div>
 			</div>
 		</div>

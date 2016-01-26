@@ -20,14 +20,13 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User login(User user) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		User Authuser = userDao.get(user.getEmail(), user.getPassword());
+		return Authuser;
 	}
 
 	@Override
 	public void join(User user) throws Exception {
-		// TODO Auto-generated method stub
-		
+		userDao.join(user);
 	}
 	
 }

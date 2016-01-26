@@ -14,7 +14,7 @@ pageContext.setAttribute("newLine","\n");
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/guestbook.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/assets/css/guestbook.css" rel="stylesheet"
 	type="text/css">
 </head>
 <body>
@@ -22,7 +22,7 @@ pageContext.setAttribute("newLine","\n");
 		<c:import url ="/WEB-INF/views/include/header.jsp"/>
 		<div id="content">
 			<div id="guestbook">
-				<form action="/mysite/guestbook" method="post">
+				<form action="${pageContext.request.contextPath}/guestbook" method="post">
 					<input type="hidden" name="a" value="insert">
 					<table>
 						<tr>
@@ -52,7 +52,7 @@ pageContext.setAttribute("newLine","\n");
 							<td>${count-status.index }</td>
 							<td>${vo.name}</td>
 							<td>${vo.reg_date}</td>
-							<td><a href="/mysite/guestbook?a=deleteform&id=${vo.no}">삭제</a></td>
+							<td><a href="${pageContext.request.contextPath}/guestbook/deleteform?id=${vo.no}">삭제</a></td>
 						</tr>
 						<tr>
 							<!-- <td colspan=4><!%=vo.getMessage().replaceAll("\n", "<br/>") %></td> -->

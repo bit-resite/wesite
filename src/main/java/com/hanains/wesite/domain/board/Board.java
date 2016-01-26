@@ -53,7 +53,10 @@ public class Board {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "Board [no=" + no + ", memberName=" + memberName + ", viewCount=" + viewCount + ", content=" + content
+				+ ", Regdate=" + Regdate + ", title=" + title + ", memberNo=" + memberNo + "]";
+	}
 	
 }
