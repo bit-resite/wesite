@@ -5,5 +5,12 @@
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="board">
-
+	<select id="getList" resultType="Board">
+			<![CDATA[
+				SELECT a.no, a.title, a.member_no, b.name as member_name, a.view_cnt,
+						to_char(a.reg_date, 'yyyy-mm-dd hh:mi:ss') AS reg_date
+				FROM board a, member b
+				WHERE a.member_no = b.no
+		]]>
+	</select>
 </mapper>
